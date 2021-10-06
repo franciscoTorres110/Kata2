@@ -16,11 +16,11 @@ public class Histogram<T> {
         return data;
     }
     
-    public Map<Integer, Integer> getHistogram(){
-        Map<Integer, Integer> histogram = new HashMap<Integer, Integer>();
+    public Map<String, Integer> getHistogram(){
+        Map<String, Integer> histogram = new HashMap<String, Integer>();
         
         for (T key : data) {
-            histogram.put((Integer) key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
+            histogram.put((String) key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
         }
         
         return histogram;

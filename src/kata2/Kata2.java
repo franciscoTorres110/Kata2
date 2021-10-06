@@ -21,13 +21,13 @@ public class Kata2 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Integer[] data = {1,1,1,1,2,2,3,3,3,4,4,3,5,3,3};
+        String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
         
         Histogram histo = new Histogram(data);
         
-        Map<Integer,Integer> histogr = histo.getHistogram();
+        Map<String,Integer> histogr = histo.getHistogram();
         
-        for (Map.Entry<Integer, Integer> entry : histogr.entrySet()) {
+        for (Map.Entry<String, Integer> entry : histogr.entrySet()) {
             System.out.println(entry.getKey() + "==>" + histogr.get(entry.getKey()));
         }
         
